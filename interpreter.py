@@ -1,5 +1,5 @@
-# instruction sets
-from instruction_sets.arithmetic_logic.ADD import ADD
+# instruction decode
+from instruction_decode import decode
 # debugger
 from debugger.print_register_memory import print_register_memory
 
@@ -15,9 +15,9 @@ try:
 
     # Mengecek setiap line instruksi
     for line in isi_file.split("\n"):
-        ADD("r0", "r1")
-        print(line)
+        decode(line)
 
+    # Mengecek register memory   
     print_register_memory()
 
 # Ketika try di atas error maka tidak ada file yang dipanggil

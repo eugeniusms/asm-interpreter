@@ -4,4 +4,3 @@ from memory.register_memory import store, load
 def ADD(rd, rr):
     hasil = load(rd) + load(rr)
     store(rd, hasil)
-    
