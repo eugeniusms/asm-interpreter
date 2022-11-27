@@ -9,3 +9,4 @@ main:
     sub r0, r1
     subi r1, 2
     and r0, r1
+    andi r0, 0

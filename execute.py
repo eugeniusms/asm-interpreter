@@ -7,6 +7,7 @@ from instruction_sets.arithmetic_logic.ADD import ADD
 from instruction_sets.arithmetic_logic.SUB import SUB
 from instruction_sets.arithmetic_logic.SUBI import SUBI
 from instruction_sets.arithmetic_logic.AND import AND
+from instruction_sets.arithmetic_logic.ANDI import ANDI
 # data transfer
 from instruction_sets.data_transfer.LDI import LDI
 # directive
@@ -35,6 +36,9 @@ def execute(line_counter, command_list):
     elif (command_list[0].upper() == "AND"):
         AND(command_list[1], command_list[2])
         print("AND")
+    elif (command_list[0].upper() == "ANDI"):
+        ANDI(command_list[1], command_list[2])
+        print("ANDI")
 
     # data transfer
     elif (command_list[0].upper() == "LDI"):
