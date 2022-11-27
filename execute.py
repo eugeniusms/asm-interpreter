@@ -5,6 +5,7 @@ from memory.label_address_memory import SET_LABEL_ADDRESS
 # arithmetic logic
 from instruction_sets.arithmetic_logic.ADD import ADD
 from instruction_sets.arithmetic_logic.SUB import SUB
+from instruction_sets.arithmetic_logic.SUBI import SUBI
 # data transfer
 from instruction_sets.data_transfer.LDI import LDI
 # directive
@@ -27,6 +28,9 @@ def execute(line_counter, command_list):
     elif (command_list[0].upper() == "SUB"):
         SUB(command_list[1], command_list[2])
         print("SUB")
+    elif (command_list[0].upper() == "SUBI"):
+        SUBI(command_list[1], command_list[2])
+        print("SUBI")
 
     # data transfer
     elif (command_list[0].upper() == "LDI"):
