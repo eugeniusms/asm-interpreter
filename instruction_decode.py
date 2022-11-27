@@ -1,5 +1,5 @@
-# instruction sets
-from instruction_sets.arithmetic_logic.ADD import ADD
+# execute
+from execute import execute
 
 def decode(line):
     if (line == ""): # saat line kosong
@@ -8,6 +8,7 @@ def decode(line):
         # split line
         command_list = split_command(line)
         print(command_list) # [DEBUG COMMAND LIST]
+        execute(command_list)
 
     # ADD("r0", "r1")
 
