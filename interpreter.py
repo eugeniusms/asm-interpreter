@@ -8,8 +8,8 @@ try:
     isi_file = file_input.read() 
     file_input.close()
 
-    for i in isi_file:
-        print(i, end=" ")
+    for line in isi_file.split("\n"):
+        print(line)
 
 # Ketika try di atas error maka tidak ada file yang dipanggil
 except FileNotFoundError:
