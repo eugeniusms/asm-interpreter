@@ -7,7 +7,6 @@ def decode(line):
     else:
         # split line
         command_list = split_command(line)
-        print(command_list) # [DEBUG COMMAND LIST]
         execute(command_list)
 
     # ADD("r0", "r1")
