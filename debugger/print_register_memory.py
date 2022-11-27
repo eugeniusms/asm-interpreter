@@ -1,7 +1,14 @@
 from memory.register_memory import lst
 
 def print_register_memory():
-    print("Register Memory:")
+    print("=====================================")
+    print("Register Memory")
+    print("=====================================")
     for i in range(0, 32):
-        print("r" + str(i) + ": " + str(lst[i]))
-    print("")
+        if (i % 2 == 1):
+            prt = "R" + str("%02d" % i) + ": " + str(lst[i])
+            print(prt.ljust(16, ' '))
+        else:
+            prt = "R" + str("%02d" % i) + ": " + str(lst[i])
+            print(prt.ljust(16, ' '), end = " ")
+    print("=====================================")
