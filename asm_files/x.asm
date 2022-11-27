@@ -10,3 +10,5 @@ main:
     subi r1, 2
     and r0, r1
     andi r0, 0
+    or r0, r1
+    ori r2, 10
