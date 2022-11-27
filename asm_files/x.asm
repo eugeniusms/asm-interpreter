@@ -12,3 +12,5 @@ main:
     andi r0, 0
     or r0, r1
     ori r2, 10
+    inc r0
+    dec r1

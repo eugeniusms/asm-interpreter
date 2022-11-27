@@ -6,6 +6,8 @@ from memory.label_address_memory import SET_LABEL_ADDRESS
 from instruction_sets.arithmetic_logic.ADD import ADD
 from instruction_sets.arithmetic_logic.AND import AND
 from instruction_sets.arithmetic_logic.ANDI import ANDI
+from instruction_sets.arithmetic_logic.DEC import DEC
+from instruction_sets.arithmetic_logic.INC import INC
 from instruction_sets.arithmetic_logic.OR import OR
 from instruction_sets.arithmetic_logic.ORI import ORI
 from instruction_sets.arithmetic_logic.SUB import SUB
@@ -35,6 +37,12 @@ def execute(line_counter, command_list):
     elif (command_list[0].upper() == "ANDI"):
         ANDI(command_list[1], command_list[2])
         print("ANDI")
+    elif (command_list[0].upper() == "DEC"):
+        DEC(command_list[1])
+        print("DEC")
+    elif (command_list[0].upper() == "INC"):
+        INC(command_list[1])
+        print("INC")
     elif (command_list[0].upper() == "OR"):
         OR(command_list[1], command_list[2])
         print("OR")
