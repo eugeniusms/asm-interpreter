@@ -25,6 +25,9 @@ def split_command(line):
         # saat bertemu spasi atau tab
         if (ch == " " or ch == "\t"):
             if (command != ""):
+                # saat ada komanya jangan ditambahin
+                if (command[-1] == ","):
+                    command = command[:-1]
                 command_list.append(command)
             command = "" # reset command
 
