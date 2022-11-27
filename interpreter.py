@@ -2,6 +2,7 @@
 from instruction_decode import decode
 # debugger
 from debugger.print_register_memory import print_register_memory
+from debugger.print_variable_register import print_variable_register
 
 file_masukan = input("Masukkan nama file input: ")
 file_masukan = "asm_files/"+file_masukan
@@ -19,6 +20,8 @@ try:
 
     # Mengecek register memory   
     print_register_memory()
+    # Mengecek register variable
+    print_variable_register()
 
 # Ketika try di atas error maka tidak ada file yang dipanggil
 except FileNotFoundError:

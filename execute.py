@@ -4,6 +4,7 @@ from instruction_sets.arithmetic_logic.ADD import ADD
 # data transfer
 from instruction_sets.data_transfer.LDI import LDI
 # directive
+from instruction_sets.directive.DEF import DEF
 from instruction_sets.directive.INCLUDE import INCLUDE
 
 def execute(command_list):
@@ -20,9 +21,12 @@ def execute(command_list):
         print("LDI")
 
     # directive
+    elif (command_list[0].upper() == ".DEF"):
+        DEF(command_list[1], command_list[3])
+        print(".DEF")
     elif (command_list[0].upper() == ".INCLUDE"):
         INCLUDE(command_list[1])
-        print("INCLUDE")
+        print(".INCLUDE")
 
     # not found
     else:
