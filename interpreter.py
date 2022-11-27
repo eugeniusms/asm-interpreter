@@ -1,6 +1,7 @@
 # instruction decode
 from instruction_decode import decode
 # debugger
+from debugger.print_label_address_memory import print_label_address_memory
 from debugger.print_register_memory import print_register_memory
 from debugger.print_variable_register import print_variable_register
 
@@ -24,6 +25,8 @@ try:
     print_register_memory()
     # Mengecek register variable
     print_variable_register()
+    # Mengecek label address
+    print_label_address_memory()
 
 # Ketika try di atas error maka tidak ada file yang dipanggil
 except FileNotFoundError:
