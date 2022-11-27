@@ -1,13 +1,13 @@
 # execute
 from execute import execute
 
-def decode(line):
-    if (line == ""): # saat line kosong
+def decode(line_counter, line_content):
+    if (line_content == ""): # saat line kosong
         return None
     else:
         # split line
-        command_list = split_command(line)
-        execute(command_list)
+        command_list = split_command(line_content)
+        execute(line_counter, command_list)
 
     # ADD("r0", "r1")
 

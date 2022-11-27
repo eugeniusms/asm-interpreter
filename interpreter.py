@@ -15,8 +15,10 @@ try:
     file_input.close()
 
     # Mengecek setiap line instruksi
-    for line in isi_file.split("\n"):
-        decode(line)
+    line_counter = 0
+    for line_content in isi_file.split("\n"):
+        line_counter += 1
+        decode(line_counter, line_content)
 
     # Mengecek register memory   
     print_register_memory()

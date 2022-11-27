@@ -1,4 +1,7 @@
-# instruction sets
+# label address ===============================================================
+from memory.label_address_memory import SET_LABEL_ADDRESS
+
+# instruction sets ============================================================
 # arithmetic logic
 from instruction_sets.arithmetic_logic.ADD import ADD
 # data transfer
@@ -7,11 +10,17 @@ from instruction_sets.data_transfer.LDI import LDI
 from instruction_sets.directive.DEF import DEF
 from instruction_sets.directive.INCLUDE import INCLUDE
 
-def execute(command_list):
-    print(command_list) # [DEBUG COMMAND LIST]
+def execute(line_counter, command_list):
+    print(line_counter, command_list) # [DEBUG COMMAND LIST]
+
+    # label address
+    if (command_list[0][-1] == ":"):
+        label = command_list[0][:-1]
+        SET_LABEL_ADDRESS(label, line_counter)
+        print("LABELING")
 
     # arithmetic logic
-    if (command_list[0].upper() == "ADD"):
+    elif (command_list[0].upper() == "ADD"):
         ADD(command_list[1], command_list[2])
         print("ADD") # [DEBUG COMMAND]
 
