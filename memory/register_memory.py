@@ -1,4 +1,4 @@
-lst = [0, 0, 0, 0, 0,
+lst = [0, 7, 0, 0, 0,
        0, 0, 0, 0, 0,
        0, 0, 0, 0, 0,
        0, 0, 0, 0, 0,
@@ -8,8 +8,8 @@ lst = [0, 0, 0, 0, 0,
         
 def store(reg, value):
     index = int(reg[1:])
-    lst[reg] = value
+    lst[index] = value
 
 def load(reg):
     index = int(reg[1:])
-    return lst[reg]
+    return lst[index]
