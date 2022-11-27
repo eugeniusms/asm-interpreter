@@ -8,3 +8,4 @@ main:
     add r0, r1
     sub r0, r1
     subi r1, 2
+    and r0, r1
